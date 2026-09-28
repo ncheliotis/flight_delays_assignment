@@ -1,0 +1,7 @@
+.venv/
+.vscode/
+__pycache__/
+*.code-workspace
+
+01.data/* 
+!01.data/04.Final_Output/
