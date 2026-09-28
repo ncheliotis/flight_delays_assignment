@@ -1,7 +1,7 @@
 # Flight delays assignment
 
 A Bronze/Silver/Gold pipeline over the 2015 US flight delays dataset, built with PySpark.
-It loads the raw files, masters them into a deduplicated `flights` dataset, and produces
+It loads the raw files from https://www.kaggle.com/datasets/usdot/flight-delays, masters them into a deduplicated `flights` dataset, and produces
 `flights_availability`: daily ground time per airline.
 
 ## How to run
