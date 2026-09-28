@@ -179,10 +179,10 @@ gold_df.write.mode("overwrite").partitionBy("FLIGHT_DATE").parquet(
 )
 
 # for assignment purposes to have output in csv
-# gold_df.toPandas().to_csv(
-#    str(PROJECT_ROOT / "01.data" / "04.Final_Output" / "flights_availability.csv"),
-#    index=False,
-# )
+gold_df.toPandas().to_csv(
+    str(PROJECT_ROOT / "01.data" / "04.Final_Output" / "flights_availability.csv"),
+    index=False,
+)
 
 print("\nGold Availability Completed Successfully.")
 

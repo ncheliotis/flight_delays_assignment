@@ -6,7 +6,8 @@ It loads the raw files, masters them into a deduplicated `flights` dataset, and 
 
 ## How to run
 
-Requires Python 3.11+ and Java 17.
+Requires Python: 3.14.3, Java: OpenJDK 17.0.20.1. and PySpark: 4.2.0
+
 
 ```
 python -m venv .venv

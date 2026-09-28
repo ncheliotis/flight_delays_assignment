@@ -3,9 +3,9 @@ from pathlib import Path
 # Define the project root directory and data directories
 
 
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-DATA_ROOT = PROJECT_ROOT / "01.Data"
+DATA_ROOT = PROJECT_ROOT / "01.data"
 
 SOURCE_PATH = DATA_ROOT / "00.Source"
 
@@ -45,33 +45,8 @@ FLIGHTS_BK = [
     "SCHEDULED_DEPARTURE",
 ]
 
-TASK_2_VALIDATION_COLUMNS = [
-    "YEAR",
-    "MONTH",
-    "DAY",
-    "AIRLINE",
-    "TAIL_NUMBER",
-    "DEPARTURE_TIME",
-    "ARRIVAL_TIME",
-    "ELAPSED_TIME",
-]
 
 # Define the correction and feed window days
 CORRECTION_WINDOW_DAYS = 7
 
-FEED_WINDOW_DAYS = 10  # 7 days of correction + possible buffer, could easily be 7 days
-
-# If this script is run directly, print the paths and check if the source files exist
-# if __name__ == "__main__":
-#     print("Project Root:", PROJECT_ROOT)
-#     print("Data Root:", DATA_ROOT)
-#     print("Bronze Path:", bronze_path)
-#     print("Silver Path:", silver_path)
-#     print("Gold Path:", gold_path)
-#     print("Flights Source:", FLIGHTS_SOURCE)
-#     print("Airports Source:", AIRPORTS_SOURCE)
-#     print("Silver Flights Path:", SILVER_FLIGHTS_PATH)
-#     print("\nFlights Source Exists:", FLIGHTS_SOURCE.exists())
-#     print("Airlines Source Exists:", AIRLINES_SOURCE.exists())
-#     print("Airports Source Exists:", AIRPORTS_SOURCE.exists())
-#     print("Gold Availability Path:", GOLD_AVAILABILITY_PATH)
+FEED_WINDOW_DAYS = 10  # 7 days of correction + possible buffer in case we missed runs

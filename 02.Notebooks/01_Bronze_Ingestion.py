@@ -9,7 +9,7 @@ os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, current_timestamp, lit
 
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 SRC_PATH = PROJECT_ROOT / "03.src"
 
@@ -85,4 +85,4 @@ print(f"Airports DataFrame Count: {airports_df.count()}")
 
 print("\nBronze Ingestion Completed Successfully.")
 
-spark.stop
+spark.stop()
